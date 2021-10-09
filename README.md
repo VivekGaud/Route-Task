@@ -1,5 +1,6 @@
 
 create virtualenv
+
 activate virtualenv
 
 install the requirements.txt file:
