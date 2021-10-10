@@ -1,21 +1,41 @@
+# Route Task
 
+
+## Installation
+
+```bash
 create virtualenv
-
+```
+```bash
 activate virtualenv
+```
 
-install the requirements.txt file:
-	pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
-Check if rebbitmq-server is running
+Check if rabbitmq-server is running.
 
-Start Celery:
-	celery -A celeryTask worker -l info -P eventlet
+Start Celery Worker :
+```bash
+celery -A celeryTask worker -l info -P eventlet
+```
 
-Run runCelery.py to start celery worker:
-	python runCelery.py
+Run Celery Task :
+```bash
+python runCelery.py
+```
 
-Run the djnago project(routeTask):
-	python manage.py runserver
+Run the django project(routeTask) : 
+```bash
+python manage.py runserver
+```
 
-Postman collection are shared:
-	route_task_api.postman_collection.json
+Postman collection: route_task_api.postman_collection.json
+
+## Steps to Test
+
+- Import the above postman api collection.
+- Call api with POST request to add item ({domain}/api/add_item/) with raw json item .
+-  Call api with GET request to view item ({domain}/api/view_items/) to check status of item (status of item will change after 10 sec) .
+
