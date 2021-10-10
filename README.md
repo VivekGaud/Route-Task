@@ -3,35 +3,32 @@
 
 ## Installation
 
-```bash
-create virtualenv
-```
-```bash
-activate virtualenv
-```
+- Create virtualenv
+- Activate virtualenv
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Check if rabbitmq-server is running.
+- Check if rabbitmq-server is running.
 
-Start Celery Worker :
+- Start Celery Worker :
 ```bash
 celery -A celeryTask worker -l info -P eventlet
 ```
 
-Run Celery Task :
+- Run Celery Task :
 ```bash
 python runCelery.py
 ```
 
-Run the django project(routeTask) : 
+- Run the django project(routeTask) : 
 ```bash
 python manage.py runserver
 ```
 
-Postman collection: route_task_api.postman_collection.json
+- Postman collection: 
+  route_task_api.postman_collection.json
 
 ## Steps to Test
 
